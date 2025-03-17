@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24B83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CommitEntity" representedClassName="CommitEntity" syncable="YES">
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="sha" optional="YES" attributeType="String"/>
+        <relationship name="repository" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RepositoryEntity" inverseName="commits" inverseEntity="RepositoryEntity"/>
+    </entity>
+    <entity name="RepositoryEntity" representedClassName="RepositoryEntity" parentEntity="CommitEntity" syncable="YES">
+        <attribute name="html_url" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="repoDesc" optional="YES" attributeType="String"/>
+        <relationship name="commits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CommitEntity" inverseName="repository" inverseEntity="CommitEntity"/>
+    </entity>
+</model>

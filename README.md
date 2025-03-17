@@ -80,3 +80,6 @@ This approach ensures that **network calls and Core Data operations do not inter
 ## Conclusion
 This project structure provides a **clean, scalable, and maintainable architecture** while ensuring a **smooth user experience and testability**.
 
+## Authors
+
+- [@Hafiz2a](https://www.github.com/hafiz2a)
